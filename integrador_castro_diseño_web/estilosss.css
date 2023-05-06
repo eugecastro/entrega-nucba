@@ -1,0 +1,270 @@
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(imagen/perro1.png.jpg);
+    background-size:cover;
+    background-position:center;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.banner {
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(imagen/perro1.png.jpg);
+    background-size:cover;
+    background-position:center;
+    border-bottom: 1px solid white;
+}
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+img {
+    height: 40px;
+    width: 40px;
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: white ;
+    text-transform: uppercase;
+}
+.navbar ul li::after {
+    content:'';
+    height: 3px;
+    width: 0;
+    background:greenyellow;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after {
+    width: 100%;
+}
+h2 {
+    text-align: center;
+    color: white;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight:bold ;
+    border: 2px solid greenyellow;
+}
+/*aplico css grid*/
+.galeriaContenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 150px;
+    padding: 20px;
+    grid-gap: 10px;
+}
+.galeriaImagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+@media only screen and (min-width:480px){
+    .galeriaContenedor {
+        grid-template-columns: repeat(1, 1fr);
+        width: 90%;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width:768px){
+    .galeriaContenedor {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .itemTres {
+        grid-column-start: span 2;
+    } 
+    .itemCuatro {
+        grid-column-start: span 3;
+    }
+    .itemCinco {
+        grid-row-start: span 3;
+    }
+    .itemNueve {
+        grid-column-start: span 3;
+    }
+}
+@media only screen and (min-width:1200px){
+    .galeriaContenedor {
+        grid-template-columns: repeat(4, 1fr);
+        width: 90%;
+        margin: auto;
+    }
+    .itemUno {
+        grid-column-start: span 2;
+        grid-row-start: span 2;
+    } 
+    .itemTres {
+        grid-column-start: span 1;
+        grid-row-start: span 1;
+    }
+    .itemCuatro {
+        grid-column-start: span 2;
+        grid-row-start: span 2; 
+    }
+    .itemDos {
+        grid-column-start: span 1;
+        grid-row-start: span 1; 
+    }
+    .itemOcho {
+        grid-column-start: span 2;
+    }
+}
+/*como funciona en cuatro pasos galeria de imagenes*/
+.pasosContenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows:150px;
+    padding: 20px;
+    grid-gap: 10px;
+}
+.pasoImagen {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    object-fit:cover;
+}
+@media only screen and (min-width:480px){
+    .pasosContenedor {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        margin: auto;
+    }
+    .pasoUno {
+        grid-column-start:span 1;
+        grid-row-start:span 2;
+    }
+    .pasoDos {
+        grid-column-start:span 1;
+        grid-row-start:span 2;
+    }
+    .pasoTres {
+        grid-column-start: span 1;
+        grid-row-start: span 2;
+    } 
+    .pasoCuatro {
+        grid-column-start: span 1;
+        grid-row-start:span 2;
+    }
+    .pasoCinco {
+        grid-row-start: span 2;
+        grid-column-start: span 1;
+    }
+    .pasoSeis {
+        grid-column-start:span 1;
+        grid-row-start:span 2;
+    }
+    .pasoSiete {
+        grid-column-start:span 1;
+        grid-row-start:span 2;
+    }
+    .pasoOcho {
+        grid-column-start:span 1;
+        grid-row-start:span 2;
+    }
+}
+
+@media only screen and (min-width:768px){
+    .pasosContenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pasoUno {
+        grid-column-start:span 1;
+        grid-row-start:span 2;
+    }
+    .pasoDos {
+        grid-column-start:span 1;
+        grid-row-start: span 2;
+    }
+    .pasoTres {
+        grid-column-start: span 1;
+        grid-row-start:span 2;
+    } 
+    .pasoCuatro {
+        grid-column-start: span 1;
+        grid-row-start:span 2;
+    }
+    .pasoCinco {
+        grid-row-start: span 2;
+        grid-column-start: span 1;
+    }
+    .pasoSeis {
+        grid-column-start:span 1;
+        grid-row-start:span 2;
+    }
+    .pasoSiete {
+        grid-column-start:span 1;
+        grid-row-start:span 2;
+    }
+    .pasoOcho {
+        grid-column-start:span 1;
+        grid-row-start:span 2;
+    }
+    
+}
+@media only screen and (min-width:1200px){
+    .pasosContenedor {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        margin: auto;
+    }
+    .pasoUno {
+        grid-column-start:span 1;
+        grid-row-start:span 2;
+    }
+    .pasoDos {
+        grid-column-start:span 1;
+        grid-row-start:span 2;
+    }
+    .pasoTres {
+        grid-column-start: span 1;
+        grid-row-start:span 2;
+    } 
+    .pasoCuatro {
+        grid-column-start: span 1;
+        grid-row-start:span 2;
+    }
+    .pasoCinco {
+        grid-row-start: span 2;
+        grid-column-start: span 1;
+    }
+    .pasoSeis {
+        grid-column-start:span 1;
+        grid-row-start:span 2;
+    }
+    .pasoSiete {
+        grid-column-start:span 1;
+        grid-row-start:span 2;
+    }
+    .pasoOcho {
+        grid-column-start:span 1;
+        grid-row-start:span 2;
+    }
+}
+
+
+
+

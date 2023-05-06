@@ -1,0 +1,106 @@
+* {
+    padding:0 ;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(imagen/perro1.png.jpg);
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(imagen/perro1.png.jpg);
+    background-size:cover;
+    background-position:center;
+}
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+img {
+    height: 40px;
+    width: 40px;
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: white ;
+    text-transform: uppercase;
+}
+.navbar ul li::after {
+    content:'';
+    height: 3px;
+    width: 0;
+    background: greenyellow;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after {
+    width: 100%;
+}
+/*iniciar sesion*/
+form {
+    margin: auto;
+    width:50% ;
+    max-width: 500px;
+    background-color: black;
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 25px;    
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: white;
+    }
+    input {
+        display: block;
+        padding: 10px;
+        width: 100%;
+        margin: 30px 0;
+        font-size: 20px;
+    }
+    input[type="submit"] {
+        background-color: yellowgreen;
+        cursor: pointer;
+        border-radius: 20px;
+        border: 0;
+        opacity: 0.8;
+        margin-bottom: 0;
+    }
+    input[type="submit"]:hover {
+        opacity: 1;
+    }
+    input[type="submit"]:active {
+        transform: scale(0.95);
+    }
+    @media only screen and (max-width:480px) {
+       form {
+           width: 75%;
+       }
+    }
+    @media only screen and (max-width:768px) {
+       form {
+           width: 95%;
+       } 
+    }
